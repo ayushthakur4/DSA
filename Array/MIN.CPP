@@ -2,15 +2,15 @@
 #include <climits>
 using namespace std;
 
-int getMax(int num[], int n) {
-    int min = INT_MAX;
+int getMin(int num[], int n) {
+    int mini = INT_MAX;
 
     for (int i = 0; i < n; i++) {
-        if (num[i] > min) {
-            min = num[i];
+        if (num[i] < mini) {
+            mini = num[i];
         }
     }
-    return min;
+    return mini;
 }
 
 int main() {
@@ -23,8 +23,8 @@ int main() {
         cin >> num[i];
     }
 
-    int maximum = getMax(num, size);
-    cout << "Maximum value is: " << maximum << endl;
+    int minimum = getMin(num, size);
+    cout << "Minimum value is: " << minimum << endl;
 
     return 0;
 }
